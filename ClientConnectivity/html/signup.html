@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<body>
+    <div class="container">
+        <h1>User</h1>
+        <form action="http://localhost:8080/addUser" method="POST">
+            <div class="form-group">
+                <label for="full name">Full name:</label>
+                <input type="text" class="form-control" id="name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <input type="text" class="form-control" id="genderId" name="gender">
+            </div>
+            <div class="form-group">
+                <label for="year">Year of Birth:</label>
+                <input type="number" class="form-control" id="yearId" name="year">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email">
+            </div>
+            <button type="submit" class="btn btn-primary" id="myBtn">Submit</button>
+            <a class="btn btn-primary" href="/home" role="button">Return Home</a>
+        </form>
+    </div>
+</body>
+
+<script>
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+    document.getElementById('name').value = getParameterByName('name');
+    document.getElementById('genderId').value = getParameterByName('gender');
+    document.getElementById('yearId').value = getParameterByName('year');
+    document.getElementById('email').value = getParameterByName('email');
+</script>
