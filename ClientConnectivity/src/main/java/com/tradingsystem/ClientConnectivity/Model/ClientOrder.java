@@ -1,6 +1,6 @@
 package com.tradingsystem.ClientConnectivity.Model;
 
-public class Order {
+public class ClientOrder {
     String product;
     int quantity;
     double price;
@@ -8,10 +8,10 @@ public class Order {
     String portfolioID;
     String status;
 
-    public Order() {
+    public ClientOrder(){
     }
 
-    public Order(String product, int quantity, double price, String clientID, String portfolioID, String status) {
+    public ClientOrder(String product, int quantity, double price, String clientID, String portfolioID, String status) {
         this.product = product;
         this.quantity = quantity;
         this.price = price;

@@ -15,10 +15,15 @@ import org.springframework.web.bind.annotation.RestController;
 public class ClientController {
 
     @PostMapping("/addClient")
-	public @ResponseBody String hello(@RequestBody Client body) {
-        //Client client= body;
-        System.out.println(body);
-		return body.toString();
+	public @ResponseBody Client hello(@RequestBody Client body) {
+        Client client= body;
+        System.out.println(client);
+		return body;
+    }
+
+    @PostMapping("/createOrder")
+    public @ResponseBody String createOrder(@RequestBody ClientOrder body){
+
     }
     
     
