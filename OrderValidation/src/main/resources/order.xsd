@@ -1,0 +1,32 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+xmlns:tns="http://localhost:8080" 
+targetNamespace="http://localhost:8080" 
+elementFormDefault="qualified">
+
+    <xs:element name="validateOrderRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="order" type="tns:ClientOrder" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="validateOrderResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="valid" type="xs:boolean" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="ClientOrder">
+        <xs:sequence>
+            <xs:element name="product" type="xs:string" />
+            <xs:element name="quantity" type="xs:int" />
+            <xs:element name="price" type="xs:double"/>
+            <xs:element name="clientID" type="xs:string"/>
+            <xs:element name="portfolioID" type="xs:string"/>
+            <xs:element name="status" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
