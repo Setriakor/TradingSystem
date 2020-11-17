@@ -11,10 +11,10 @@ public class OrderClient extends WebServiceGatewaySupport {
 
     public ValidateOrderResponse validateOrder(ClientOrder order){
         ValidateOrderRequest req= new ValidateOrderRequest();
-        req.setProduct(order);
+        req.setOrder(order);
 
         ValidateOrderResponse resp= (ValidateOrderResponse) getWebServiceTemplate()
-        .marshalSendAndReceive("http://localhost:9080/ws",req);
+        .marshalSendAndReceive("http://localhost:8081/ws",req);
         return resp;
     }    
 }

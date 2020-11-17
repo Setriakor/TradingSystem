@@ -6,7 +6,7 @@ elementFormDefault="qualified">
     <xs:element name="validateOrderRequest">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="product" type="tns:ClientOrder" />
+                <xs:element name="order" type="tns:ClientOrder" />
             </xs:sequence>
         </xs:complexType>
     </xs:element>
