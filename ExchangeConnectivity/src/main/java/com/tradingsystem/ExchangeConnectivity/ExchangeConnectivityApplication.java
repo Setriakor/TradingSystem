@@ -9,5 +9,4 @@ public class ExchangeConnectivityApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ExchangeConnectivityApplication.class, args);
 	}
-
 }
