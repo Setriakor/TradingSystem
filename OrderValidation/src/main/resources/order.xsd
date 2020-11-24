@@ -1,5 +1,7 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
 xmlns:tns="http://localhost:8080" 
+xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+xmlns:basic="http://jaxb2-commons.dev.java.net/basic"
 targetNamespace="http://localhost:8080" 
 elementFormDefault="qualified">
 
@@ -23,6 +25,7 @@ elementFormDefault="qualified">
             <xs:element name="product" type="xs:string" />
             <xs:element name="quantity" type="xs:int" />
             <xs:element name="price" type="xs:double"/>
+            <xs:element name="side" type="xs:string"/>
             <xs:element name="clientID" type="xs:string"/>
             <xs:element name="portfolioID" type="xs:string"/>
             <xs:element name="status" type="xs:string"/>
