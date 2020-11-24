@@ -2,7 +2,6 @@ package com.tradingsystem.ClientConnectivity;
 
 import java.util.*;
 
-import com.tradingsystem.OrderClient;
 import com.tradingsystem.ClientConnectivity.Model.Client;
 import com.tradingsystem.ClientConnectivity.gen.ClientOrder;
 import com.tradingsystem.ClientConnectivity.gen.ValidateOrderRequest;
@@ -30,9 +29,7 @@ public class ClientController  {
 
     @PostMapping("/createOrder")
     public @ResponseBody ValidateOrderResponse createOrder(@RequestBody ClientOrder body) {
-        System.out.println(body.getClientID());
         ValidateOrderResponse resp= client.validateOrder(body);
-        System.out.println(resp.isValid());
         return resp;
     }
     
