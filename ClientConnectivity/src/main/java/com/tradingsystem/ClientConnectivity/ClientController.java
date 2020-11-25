@@ -20,7 +20,7 @@ import org.springframework.ws.client.core.support.WebServiceGatewaySupport;
 public class ClientController  {
     @Autowired OrderClient client;
 
-    @PostMapping("/addClient")
+    @PostMapping("/createClient")
 	public @ResponseBody Client hello(@RequestBody Client body) {
         Client client= body;
         System.out.println(client);
