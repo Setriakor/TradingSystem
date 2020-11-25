@@ -75,6 +75,23 @@
 			<artifactId>jaxb-api</artifactId>
 			<version>2.3.1</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<version>3.3.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.jvnet.jaxb2_commons</groupId>
+			<artifactId>jaxb2-basics-runtime</artifactId>
+			<version>0.9.5</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -83,20 +100,15 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>jaxb2-maven-plugin</artifactId>
-				<version>2.5.0</version>
+				<groupId>org.jvnet.jaxb2.maven2</groupId>
+				<artifactId>maven-jaxb2-plugin</artifactId>
+				<version>0.14.0</version>
 				<executions>
 					<execution>
-						<id>xjc</id>
+						<!-- <id>xjc</id> -->
 						<goals>
-							<goal>xjc</goal>
+							<goal>generate</goal>
 						</goals>
 					</execution>
 				</executions>
@@ -104,6 +116,21 @@
 					<sources>
 						<source>${project.basedir}/src/main/resources/order.xsd</source>
 					</sources>
+					<extension>true</extension>
+					<args>
+						<arg>-XtoString</arg>
+						<arg>-XtoString-toStringStrategyClass=com.tradingsystem.OrderValidation.MyToStringStrategy</arg>
+						<arg>-Xequals</arg>
+						<arg>-XhashCode</arg>
+						<arg>-Xcopyable</arg>
+					</args>
+					<plugins>
+						<plugin>
+							<groupId>org.jvnet.jaxb2_commons</groupId>
+							<artifactId>jaxb2-basics</artifactId>
+							<version>0.9.5</version>
+						</plugin>
+					</plugins>
 				</configuration>
 			</plugin>
 		</plugins>
