@@ -1,4 +1,4 @@
-package com.tradingsystem;
+package com.tradingsystem.ClientConnectivity;
 
 import com.tradingsystem.ClientConnectivity.gen.ClientOrder;
 import com.tradingsystem.ClientConnectivity.gen.ValidateOrderRequest;

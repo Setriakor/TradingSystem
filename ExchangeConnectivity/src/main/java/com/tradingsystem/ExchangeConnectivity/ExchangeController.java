@@ -1,5 +1,6 @@
 package com.tradingsystem.ExchangeConnectivity;
 
+<<<<<<< HEAD
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -63,3 +64,17 @@ public class ExchangeController {
 }
 
 
+=======
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+@Controller
+public class ExchangeController {
+    
+
+    public void postOrder(){
+        
+    }
+}
+>>>>>>> 459adb4bc26e3858eb17bde0802af05677be4e39

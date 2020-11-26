@@ -23,6 +23,7 @@ elementFormDefault="qualified">
             <xs:element name="product" type="xs:string" />
             <xs:element name="quantity" type="xs:int" />
             <xs:element name="price" type="xs:double"/>
+            <xs:element name="side" type="xs:string"/>
             <xs:element name="clientID" type="xs:string"/>
             <xs:element name="portfolioID" type="xs:string"/>
             <xs:element name="status" type="xs:string"/>
