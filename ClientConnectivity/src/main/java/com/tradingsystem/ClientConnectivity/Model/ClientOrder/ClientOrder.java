@@ -50,7 +50,7 @@ public class ClientOrder implements Serializable {
     }
 
     public ClientOrder(int clientOrderId, Portfolio portfolio, String product, int quantity, String side, double price, String status, ExchangeOrder exchangeOrder, Client client) {
-        this.clientOrderId = clientOrderId;
+        this.clientOrderId = getClientOrderId();
         this.portfolio = portfolio;
         this.product = product;
         this.quantity = quantity;
