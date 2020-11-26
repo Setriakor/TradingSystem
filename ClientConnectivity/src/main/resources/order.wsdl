@@ -15,6 +15,7 @@ elementFormDefault="qualified">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="valid" type="xs:boolean" />
+                <xs:element name="message" type="xs:string"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
